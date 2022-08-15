@@ -1,0 +1,159 @@
+
+:root{
+  --clr-dark: #8d8d8d;
+  --clr-white: #8f8f8f;
+  --clr-secondary: #5a5a5a;
+  --clr-bg: rgba(8, 7, 7, 0.744);
+  --clr-box-shadow: 2.5em 3.5em 2.5em #1b1a1a9f;
+  --clr-neutral: #ffffffe1;
+
+  --fs-primary-600: 30px;
+  --fs-secondary: 13px;
+
+  --fw-primary: 900;
+}
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  background: #3b3939;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.grid-container .flex {
+  display: flex;
+  align-items: center;
+  grid-gap: 20px;
+}
+.grid-container img {
+  width: 100px;
+}
+.grid-container .content {
+  background: #575757;
+  padding: 20px;
+  line-height: 1.9em;
+  margin: 20px;
+  border-radius: 5px;
+}
+.grid-container .content .name {
+  color: #8d8d8d;
+}
+.grid-container .content .title {
+  color: #8f8f8f;
+  opacity: 0.4;
+}
+.grid-container .content {
+  box-shadow: 3.5em 2.5em 3.5em #020202d4;
+}
+.grid-container
+.content >p:first-of-type {
+  font-size: 25px;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+  border-bottom: 1px solid#8f8f8f;
+}
+.grid-container
+.content >p:last-of-type {
+  opacity: 0.5;
+  color: #d0d0d0e1;
+}
+/* Assign grid areas */
+.grid-container .content:nth-child(1) {
+  grid-area: one;
+}
+.grid-container .content:nth-child(2) {
+  grid-area: two;
+}
+.grid-container .content:nth-child(3) {
+  grid-area: three;
+}
+.grid-container .content:nth-child(4) {
+  grid-area: four;
+}
+.grid-container .content:nth-child(5) {
+  grid-area: five;
+}
+/* CSS GRID STYLES */
+.grid-container {
+  display: grid;
+  grid-gap: 20px;
+  grid-auto-columns: 1fr;
+  width: 100%;
+  height: 100vh;
+  grid-template-areas: 
+  "one"
+  "two"
+  "three"
+  "four"
+  "five";
+}
+/* responsive design/ layout */
+@media screen and (min-width: 33em) {
+  .grid-container {
+    grid-template-areas:
+    "one one"
+    "two three"
+    "four four"
+    "five five";
+  }
+}
+@media screen and (min-width: 54em) {
+  .grid-container {
+    grid-template-areas:
+    "one one two"
+    "three four two"
+    "three five five";
+  }
+}
+@media screen and (min-width: 75em) {
+  .grid-container {
+    grid-template-areas:
+    "one one one five"
+    "two four four three";
+  }
+}
+

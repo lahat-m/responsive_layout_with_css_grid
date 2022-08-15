@@ -1,0 +1,36 @@
+<svg id="background_img" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6300" height="4500" viewBox="0 0 2100 1500">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #3b3939;
+        fill-rule: evenodd;
+      }
+
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        filter: url(#filter-2);
+      }
+    </style>
+    <filter id="filter" x="1217" y="299.188" width="790.31" height="861.592" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="2.828" in="SourceAlpha"/>
+      <feFlood result="flood" flood-opacity="0.81"/>
+      <feComposite result="composite" operator="out" in2="blur"/>
+      <feOffset result="offset" dy="46"/>
+      <feComposite result="composite-2" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend" mode="multiply" in2="SourceGraphic"/>
+    </filter>
+    <filter id="filter-2" x="1548.19" y="445.562" width="86.65" height="26.876" filterUnits="userSpaceOnUse">
+      <feGaussianBlur result="blur" stdDeviation="2.828" in="SourceAlpha"/>
+      <feFlood result="flood" flood-opacity="0.81"/>
+      <feComposite result="composite" operator="out" in2="blur"/>
+      <feOffset result="offset" dy="46"/>
+      <feComposite result="composite-2" operator="in" in2="SourceAlpha"/>
+      <feBlend result="blend" mode="multiply" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <path id="main_img" data-name="main img" class="cls-1" d="M1606.26,544.619c-270.96,117.567-254.49-12.382-132.93-144.675-10.13-143.787,460.23-165.8,368.32,150.477-183.57,118.31-84.25,156.233-69.41,210.564,0,0,105-98.579,210.54,121.585,107.36,223.95-172.17,250.93-172.17,250.93l-246.23,27.28s-737.855-31.34-62.87-332.125C1624.03,774.055,1486.41,500.011,1606.26,544.619Z"/>
+  <path id="img_eye" class="cls-2" d="M1548.2,472.447l44.69-26.879,41.97,4.41Z"/>
+</svg>
